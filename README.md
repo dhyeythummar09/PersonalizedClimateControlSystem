@@ -18,8 +18,8 @@ A real-time IoT-based dashboard to monitor and control indoor climate parameters
 ```
 IoT_Project(PersonalizedClimateControlSystem)/
 ├── Aim.png                      # Diagrammatic aim of the system
-├── esp1.ino                     # ESP32 code (Data Publishing + Device Control)
-├── esp2.ino                     # Alternate version / updated board logic
+├── esp1.ino                     # ESP32 code 1 (Data Publishing + Device Control)
+├── esp2.ino                     # ESP32 code 2 for occupancy calculation
 ├── IoT_Project_Proposal.pdf     # Initial idea and proposal
 ├── mqtt-to-mysql.js             # MQTT subscriber to log data to MySQL
 ├── package.json                 # Node.js metadata
@@ -58,7 +58,7 @@ IoT_Project(PersonalizedClimateControlSystem)/
 
 ### 1. Flash ESP32
 
-* Upload either `esp1.ino` or `esp2.ino` via Arduino IDE.
+* Upload `esp1.ino` and `esp2.ino` via Arduino IDE.
 * Configure WiFi credentials and MQTT broker in code.
 
 ### 2. Start Dashboard
@@ -97,11 +97,23 @@ Ensure `package.json` and MySQL credentials are correctly configured.
 
 ## 🚀 Technologies Used
 
-* **ESP32** (microcontroller)
-* **MQTT (EMQX Cloud)**
-* **Node.js** for logging
-* **Chart.js** for real-time graphs
-* **HTML, CSS, JS** frontend
+- **ESP32** (Microcontroller)  
+- **MQTT (EMQX Cloud)** for real-time data communication  
+- **Node.js** for backend data logging to MySQL  
+- **Chart.js** for dynamic and real-time graph visualization  
+- **HTML, CSS, JavaScript** for building the interactive frontend dashboard  
+
+## 🔧 Sensors Used
+
+- **DHT22** — Measures temperature and humidity accurately  
+- **MQ-135** — Detects air quality and CO₂ concentration  
+- **Infrared (IR) Sensors** — Track room occupancy by detecting motion  
+
+## ⚙️ Actuators and Output Devices
+
+- **Servo Motor** — Controls the vent opening and closing  
+- **Relays/LEDs** — Control and indicate the status of the fan, air conditioner, and air purifier  
+- **Buzzer & Alert LEDs** — Signal alerts for poor air quality conditions
 
 ---
 
