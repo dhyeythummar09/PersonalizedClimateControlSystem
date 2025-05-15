@@ -26,9 +26,9 @@ IoT_Project(PersonalizedClimateControlSystem)/
 ├── Project_Presentation.pdf     # Slides for presentation
 ├── TheoryAnalysis&Thresholds.pdf # Threshold logic behind decisions
 ├── public/
-│   ├── index.html              # Dashboard frontend
-│   ├── script.js               # All JS logic for charting, MQTT, control
-│   └── styles.css              # UI styles and responsive design
+    ├── index.html              # Dashboard frontend
+    ├── script.js               # All JS logic for charting, MQTT, control
+    └── styles.css              # UI styles and responsive design
 ```
 
 ---
