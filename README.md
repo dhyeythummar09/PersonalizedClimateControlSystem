@@ -64,7 +64,6 @@ IoT_Project(PersonalizedClimateControlSystem)/
 ### 2. Start Dashboard
 
 ```bash
-cd public
 open index.html # or use Live Server in VS Code
 ```
 
